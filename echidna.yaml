@@ -1,0 +1,4 @@
+prefix: crytic_
+initialize: init.json
+multi-abi: true
+cryticArgs: ["--truffle-build-directory", "app/src/contracts/"] # needed by drizzle
