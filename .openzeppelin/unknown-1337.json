@@ -24,6 +24,11 @@
       "address": "0x1E2F9E10D02a6b8F8f69fcBf515e75039D2EA30d",
       "txHash": "0x07a5116d6cc1cb37ce3664ea0b764211ce0bf723e7da5e6484676e7ab624148e",
       "kind": "transparent"
+    },
+    {
+      "address": "0x04B5dAdd2c0D6a261bfafBc964E0cAc48585dEF3",
+      "txHash": "0xe1bd29641d35d23d7b328a692bdd7ff647604b1a0a7418eae17a46d2ca4df45f",
+      "kind": "uups"
     }
   ],
   "impls": {
@@ -42,6 +47,59 @@
         "types": {
           "t_uint256": {
             "label": "uint256"
+          }
+        }
+      }
+    },
+    "65f2b551a06249a4073e80615e92d3faec3c2470bdfe4dffb23850ff2f00e85e": {
+      "address": "0x7e3f4E1deB8D3A05d9d2DA87d9521268D0Ec3239",
+      "txHash": "0xd258a3cda93a8a067a8f614228e59aa8105e4740944a675d0e8f4e78b30ba85d",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_uint8",
+            "src": "../@openzeppelin/contracts/token/ERC20/IERC20.sol:72",
+            "retypedFrom": "bool"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../@openzeppelin/contracts/token/ERC20/IERC20.sol:75"
+          },
+          {
+            "contract": "ERC1967UpgradeUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "contract": "UUPSUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../project:/contracts/ComplexStorage.sol:45"
+          },
+          {
+            "contract": "SimpleStorage",
+            "label": "storedData",
+            "type": "t_uint256",
+            "src": "../project:/contracts/SimpleStorage.sol:9"
+          }
+        ],
+        "types": {
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          },
+          "t_bool": {
+            "label": "bool"
           }
         }
       }

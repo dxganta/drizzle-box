@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.21 <0.7.0;
+pragma solidity ^0.8.0;
 
-contract SimpleStorage {
+import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
+
+contract SimpleStorage is UUPSUpgradeable {
     event StorageSet(string _message);
 
     uint256 public storedData;
@@ -11,4 +13,6 @@ contract SimpleStorage {
 
         emit StorageSet("Data stored successfully!");
     }
+
+    function _authorizeUpgrade(address newImplementation) internal override {}
 }

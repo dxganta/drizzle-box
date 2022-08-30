@@ -6,7 +6,9 @@ contract("SimpleStorage", (accounts) => {
   it("...should store the value 89.", async () => {
     // const simpleStorageInstance = await SimpleStorage.deployed();
 
-    const simpleStorageInstance = await deployProxy(SimpleStorage);
+    const simpleStorageInstance = await deployProxy(SimpleStorage, {
+      kind: "uups",
+    });
 
     // Set value of 89
     await simpleStorageInstance.set({ from: accounts[0] });
